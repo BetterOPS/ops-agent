@@ -1,0 +1,6 @@
+[log]
+level = "debug"
+
+[short_task]
+interval = "3s"
+delay = "1s"
