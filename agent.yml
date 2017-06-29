@@ -1,0 +1,5 @@
+short_example:
+  interval: 3s
+  delay: 1s
+log:
+  level: debug
