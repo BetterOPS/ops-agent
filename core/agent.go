@@ -77,7 +77,8 @@ func (sup *Supervisor) Run(t Task) {
 func (sup *Supervisor) exec(p *Process) {
 	config := viper.Sub(p.Name())
 	if err := p.Initialize(config); err != nil {
-		log.Fatalf("initialize task %s error: %v", p.Name(), err)
+		log.Errorf("initialize task %s error: %v", p.Name(), err)
+		return
 	}
 	go func() {
 		defer func() {
